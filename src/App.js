@@ -1,11 +1,12 @@
 import './App.css';
-import HomePage from './pages/HomePage';
-import ErrorPage from './pages/ErrorPage';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './routes/routes.js';
+
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 
