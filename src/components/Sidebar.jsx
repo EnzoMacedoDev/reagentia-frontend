@@ -2,10 +2,14 @@ import React from "react";
 import Logo from "../img/reagentia.png";
 import { User, Home, Settings } from "lucide-react";
 
-export default function Sidebar() {
+export default function Sidebar({userName, job}) {
   return (
     <aside className="h-screen bg-[#2bb89d] w-52 text-white flex flex-col items-center p-4">
-      <img src={Logo} alt="" className="w-20 rounded-full" />
+      <div className="flex flex-col items-center gap-2">
+        <img src={Logo} alt="" className="w-20 rounded-full" />
+        <h4 className="text-[15px]">Olá, {userName}!</h4>
+      </div>
+      <p className="text-[13px]">{job}</p>
 
       <nav className="space-y-6 mt-10 w-full ">
         <a
